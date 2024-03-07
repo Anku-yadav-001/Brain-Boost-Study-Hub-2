@@ -1,1 +1,1 @@
-# Brain-Boost-Study-Hub-2
+# Brain-Boost-Study-Hub
