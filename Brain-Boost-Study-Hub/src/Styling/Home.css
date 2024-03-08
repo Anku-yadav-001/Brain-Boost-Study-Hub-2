@@ -47,7 +47,7 @@ span{
     border: 2px solid black;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
-
+   cursor: pointer;
 }
 .content-buttons button:hover{
     border-bottom: 5px solid red;

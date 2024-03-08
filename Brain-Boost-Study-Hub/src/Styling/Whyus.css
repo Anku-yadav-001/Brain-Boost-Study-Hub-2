@@ -1,4 +1,7 @@
-
+.whyus-super-main-container{
+    background-color: black;
+    height: 83vh;
+}
 
 .whyus-header{
     text-align: center;
@@ -6,11 +9,12 @@
     font-size: 40px;
     padding: 20px;
     text-decoration: underline;
+   
 }
 .whyus-main-container{
    display: flex;
    justify-content: space-evenly;
- 
+   
 }
 .whyus-main-container div{
     width: 25%;
@@ -20,7 +24,7 @@
     text-align: center;
     padding: 10px;
     background: linear-gradient(to top, #ff6b6b, #70a1ff);
-
+   
 }
 .whyus-main-container div img{
     width: 40%;

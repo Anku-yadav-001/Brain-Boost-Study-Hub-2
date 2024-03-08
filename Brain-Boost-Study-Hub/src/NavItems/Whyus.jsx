@@ -4,7 +4,8 @@ import Free from "../assets/free.png"
 import Notes from "../assets/notes.png"
 function Whyus(){
     return <>
-    <h1 className="whyus-header">WHY US</h1>
+   <div className="whyus-super-main-container">
+   <h1 className="whyus-header">WHY US</h1>
     <div className="whyus-main-container">
         <div>
             <img src={Registration} alt=""/>
@@ -22,6 +23,7 @@ function Whyus(){
             <p>On our website, all kinds of notes are freely available like programming notes, academic notes, and so on</p>
         </div>
     </div>
+   </div>
     </>
 }
 export default Whyus

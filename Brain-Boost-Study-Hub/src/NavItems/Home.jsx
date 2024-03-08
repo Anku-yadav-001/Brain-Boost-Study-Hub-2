@@ -2,7 +2,7 @@ import TypedComponent from "../Special-Components/TypedComponent"
 import "../Styling/Home.css"
 import SchoolBoy from "../assets/schoolboy-Photoroom.jpg"
 function Home(){
-    let words = ['Programming Language Notes', 'RGPV Study Metarial', 'RGPV Previous Year Question Papers'];
+    let words = ['Programming Language Notes.', 'RGPV Study Metarial.', 'RGPV Previous Year Question Papers.'];
     return <>
     <div className="home-main-container">
       <div className="main-intro">

@@ -1,0 +1,103 @@
+
+
+.contact-main-container{
+  background-color: black;
+    height: 83vh;
+}
+.contact-header{
+    font-size: 40px;
+    text-decoration: underline;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+.contact-main-div{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.form-details {
+    width: 40%;
+    background: linear-gradient(to top, #ff6b6b, #70a1ff);
+   padding: 20px;
+   border-radius: 10px;
+}
+.form-details input{
+   width: 45.5%;
+   height: 30px;
+   border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+  
+  
+}
+.form-details input:hover{
+    border: 3px solid red;
+}
+.form-details textarea{
+    padding: 7px;
+    margin: 10px;
+    width: 93%;
+    border-radius: 10px;
+}
+.form-details textarea:hover{
+    border: 3px solid red;
+}
+.form-details button{
+    padding: 10px;
+    width: 40%;
+    margin-left: 30%;
+    border-radius: 10px;
+   margin-bottom: 10px;
+   background-color: blue;
+   font-size: 20px;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   font-weight: 600;
+   cursor: pointer;
+}
+.form-details button:hover{
+    box-shadow: red 0px 20px 30px -10px;
+    background: linear-gradient(to top, #ff0000, #2600ff);
+}
+.contact-details{
+    width: 40%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color: black;
+   
+}
+.contact-details div{
+    margin: 10px;
+    background-color:white;
+    border-radius: 10px;
+    text-align: center;
+    background: linear-gradient(to top, #ff6b6b, #70a1ff);
+    line-height: 40px;
+    cursor: pointer;
+}
+.contact-details div img{
+    width: 15%;
+   padding-top: 20px;
+
+}
+.contact-details div h2{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     color:  blue;
+}
+.contact-details div p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color:  blue;
+    padding: 10px;
+   
+}
+.footer-details{
+    background-color: black;
+}
+.footer-details p{
+    margin-left: 6%;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 5px;
+}
