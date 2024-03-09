@@ -10,11 +10,17 @@ function AuthContextProvider({children}){
    let [sixSemSub,setSixSemSub]=useState(false)
    let [sevenSemSub,setSevenSemSub]=useState(false)
    let [eightSemSub,setEightSemSub]=useState(false)
+
+   let [csBranch,setCsBranch]=useState(false)
+   let [ecBranch,setEcBranch]=useState(false)
+   let [ceBranch,setCeBranch]=useState(false)
+   let [meBranch,setMeBranch]=useState(false)
    
     return (
         <>
         <AuthContext.Provider value={{firstSemSub,setFirstSemSub,secondSemSub,setSecondSemSub,thirdSemSub,setThirdSemSub,fourthSemSub,setFourthSemSub,
-                                     fifthSemSub,setFiveSemSub,sixSemSub,setSixSemSub,sevenSemSub,setSevenSemSub,eightSemSub,setEightSemSub   }}>
+                                     fifthSemSub,setFiveSemSub,sixSemSub,setSixSemSub,sevenSemSub,setSevenSemSub,eightSemSub,setEightSemSub,ecBranch,setEcBranch ,
+                                     csBranch,setCsBranch,ceBranch,setCeBranch ,meBranch,setMeBranch}}>
             {children}
         </AuthContext.Provider>
         </>

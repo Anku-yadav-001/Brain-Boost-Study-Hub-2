@@ -14,7 +14,7 @@ function Home(){
     let [branch,setBranch]=useState(false)
     let [year,setYear]=useState(false)
     let [semester,setSemester]=useState(false)
-    let {setFirstSemSub,setSecondSemSub,setThirdSemSub,setFourthSemSub,setFiveSemSub,setSixSemSub,setSevenSemSub,setEightSemSub}=useContext(AuthContext)
+    let {setFirstSemSub,setSecondSemSub,setThirdSemSub,setFourthSemSub,setFiveSemSub,setSixSemSub,setSevenSemSub,setEightSemSub,setEcBranch,setCsBranch,setCeBranch,setMeBranch}=useContext(AuthContext)
 
   let [firstYear,setFirstYear]=useState(false)
   let [secondYear,setSecondyear]=useState(false)
@@ -53,14 +53,52 @@ function Home(){
         setSemester(false)
         setBranch(!branch)
     }
-   function BranchToYear(){
+   function BranchToYearCs(){
        setProgramming(false)
        setVisible(false)
        setPrevious(false)
         setBranch(false)
         setSemester(false)
+        setMeBranch(false)
+        setCsBranch(true)
+        setEcBranch(false)
         setYear(!year)
    }
+   function BranchToYearEc(){
+    setProgramming(false)
+    setVisible(false)
+    setPrevious(false)
+     setBranch(false)
+     setSemester(false)
+     setCsBranch(false)
+     setMeBranch(false)
+     setEcBranch(true)
+     setYear(!year)
+}
+function BranchToYearCe(){
+  setProgramming(false)
+  setVisible(false)
+  setPrevious(false)
+   setBranch(false)
+   setSemester(false)
+   setCsBranch(false)
+   setMeBranch(false)
+   setEcBranch(false)
+   setCeBranch(true)
+   setYear(!year)
+}
+function BranchToYearMe(){
+  setProgramming(false)
+  setVisible(false)
+  setPrevious(false)
+   setBranch(false)
+   setSemester(false)
+   setCsBranch(false)
+   setEcBranch(false)
+   setCeBranch(false)
+   setMeBranch(true)
+   setYear(!year)
+}
    function YearToSemester1(){
        setFirstYear(true)
        setSecondyear(false)
@@ -224,12 +262,10 @@ function Home(){
          </div>
          <div className="main-show-hide" style={{ display: branch ? 'block' : 'none' }}>
           <p>---SELECT BRANCE--</p>
-        <button onClick={BranchToYear}>CSE</button>
-        <button>AIML</button>
-        <button>EXE</button>
-        <button onClick={BranchToYear}>ECE</button>
-        <button>ME</button>
-        <button>CE</button>
+        <button onClick={BranchToYearCs}>CSE</button>
+        <button onClick={BranchToYearEc}>ECE</button>
+        <button onClick={BranchToYearMe}>ME</button>
+        <button onClick={BranchToYearCe}>CE</button>
          </div>
 
          <div className="main-show-hide" style={{ display: year ? 'block' : 'none' }}>
