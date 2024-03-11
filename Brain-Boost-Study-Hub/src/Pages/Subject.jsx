@@ -1,20 +1,54 @@
 import "../Styling/Subject.css"
 import { AuthContext } from "../Context/AuthContextProvider"
 import { useContext } from "react"
+import { Link } from "react-router-dom"
 function Subject(){
-   let {firstSemSub,secondSemSub,thirdSemSub,fourthSemSub,fifthSemSub,sixSemSub,sevenSemSub,eightSemSub,csBranch,ecBranch,ceBranch,meBranch}=useContext(AuthContext)
+   let {firstSemSub,secondSemSub,thirdSemSub,fourthSemSub,fifthSemSub,sixSemSub,sevenSemSub,eightSemSub,csBranch,ecBranch,ceBranch,meBranch,setChemistry,setMath,setEnglish,setBeee,setEgraphic}=useContext(AuthContext);
+
+   function handleChemistry(){
+    setChemistry(true)
+    setMath(false)
+    setEnglish(false)
+   }
+   function handleMath(){
+    setChemistry(false)
+    setMath(true)
+    setEnglish(false)
+    setBeee(false)
+    setEgraphic(false)
+   }
+   function handleEnglish(){
+    setChemistry(false)
+    setMath(false)
+    setEnglish(true)
+    setBeee(false)
+    setEgraphic(false)
+   }
+   function handleBeee(){
+    setChemistry(false)
+    setMath(false)
+    setEnglish(false)
+    setBeee(true)
+    setEgraphic(false)
+   }
+  function handleGraphics(){
+    setChemistry(false)
+    setMath(false)
+    setEnglish(false)
+    setBeee(false)
+    setEgraphic(true)
+  }
     return <>
       <div>
       <div className="select-subject-container"  style={{ display: firstSemSub && csBranch && !ecBranch && !ceBranch && !meBranch? 'block' : 'none' }}>
         <h1 className="subject-header">-----SELECT SUBJECTS----</h1>
         <h2 className="subject-header" style={{color:"red"}}>!! 1ST SEMESTER LATEST !!</h2>
         <div className="subject-list">
-            <button>BT-101 - Engineering Chemistry</button>
-            <button>BT-102 - Mathematics-I</button>
-            <button>BT-103 - English for Communication</button>
-            <button>BT-104 - Basic Electrical & Electronics Engineering</button>
-            <button>BT-105 - Engineering Graphics</button>
-            <button>BT-106 - Manufacturing Practices</button>
+            <Link to='/previous-year-chemistry-papers' onClick={handleChemistry}><button>BT-101 - Engineering Chemistry</button></Link>
+            <Link to='/previous-year-mathematics-papers' onClick={handleMath}><button>BT-102 - Mathematics-I</button></Link>
+            <Link to='/previous-year-english-for-communication-papers'><button onClick={handleEnglish}>BT-103 - English for Communication</button></Link>
+            <Link to='/previous-year-basic-electrical-and-electronic-engineering-papers' ><button onClick={handleBeee}>BT-104 - Basic Electrical & Electronics Engineering</button></Link>
+            <Link to='/previous-year-engineering-graphics-papers'><button onClick={handleGraphics}>BT-105 - Engineering Graphics</button></Link>
         </div>
        </div>
        <div className="select-subject-container"  style={{ display: secondSemSub && csBranch && !ecBranch && !ceBranch && !meBranch? 'block' : 'none' }}>

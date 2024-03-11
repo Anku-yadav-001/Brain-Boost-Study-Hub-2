@@ -10,6 +10,7 @@ import HtmlNotes from "../Pages/HtmlNotes"
 import CssNotes from "../Pages/CssNotes"
 import Javascript from "../Pages/Javascript"
 import ReactNotes from "../Pages/React"
+import Papers from "../Pages/Papers"
 
 function AllRoutes(){
    
@@ -44,6 +45,12 @@ function AllRoutes(){
              <Route path="/CSS-full-notes-with-brain-boost-study-hub" element={<HtmlNotes/>}/>
              <Route path="/JavaScript-full-notes-with-brain-boost-study-hub" element={<HtmlNotes/>}/>
              <Route path="/React-full-notes-with-brain-boost-study-hub" element={<HtmlNotes/>}/>
+
+             <Route path="/previous-year-chemistry-papers" element={<Papers/>}/>
+             <Route path="/previous-year-mathematics-papers" element={<Papers/>}/>
+             <Route path="/previous-year-english-for-communication-papers" element={<Papers/>}/>
+             <Route path="/previous-year-basic-electrical-and-electronic-engineering-papers" element={<Papers/>}/>
+             <Route path='/previous-year-engineering-graphics-papers' element={<Papers/>}/>
 
         </Routes>
     </div>

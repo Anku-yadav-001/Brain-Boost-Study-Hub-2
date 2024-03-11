@@ -21,12 +21,18 @@ function AuthContextProvider({children}){
    let [jsNotes,setJsNotes]=useState(false)
    let [reactNotes,setReactNotes]=useState(false)
 
+   let [chemistry,setChemistry]=useState(false)
+   let [math,setMath]=useState(false)
+   let [english,setEnglish]=useState(false)
+   let [beee,setBeee]=useState(false)
+   let [eGraphic,setEgraphic]=useState(false)
     return (
         <>
         <AuthContext.Provider value={{firstSemSub,setFirstSemSub,secondSemSub,setSecondSemSub,thirdSemSub,setThirdSemSub,fourthSemSub,setFourthSemSub,
                                      fifthSemSub,setFiveSemSub,sixSemSub,setSixSemSub,sevenSemSub,setSevenSemSub,eightSemSub,setEightSemSub,ecBranch,setEcBranch ,
                                      csBranch,setCsBranch,ceBranch,setCeBranch ,meBranch,setMeBranch,htmlNotes,setHtmlNotes,
-                                     cssNotes,setCssNotes,jsNotes,setJsNotes,reactNotes,setReactNotes}}>
+                                     cssNotes,setCssNotes,jsNotes,setJsNotes,reactNotes,setReactNotes,chemistry,setChemistry,math,setMath,
+                                     english,setEnglish,beee,setBeee,eGraphic,setEgraphic}}>
             {children}
         </AuthContext.Provider>
         </>
