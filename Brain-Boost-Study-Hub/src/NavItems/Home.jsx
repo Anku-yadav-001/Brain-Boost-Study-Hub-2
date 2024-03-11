@@ -14,12 +14,16 @@ function Home(){
     let [branch,setBranch]=useState(false)
     let [year,setYear]=useState(false)
     let [semester,setSemester]=useState(false)
-    let {setFirstSemSub,setSecondSemSub,setThirdSemSub,setFourthSemSub,setFiveSemSub,setSixSemSub,setSevenSemSub,setEightSemSub,setEcBranch,setCsBranch,setCeBranch,setMeBranch}=useContext(AuthContext)
+    let {setFirstSemSub,setSecondSemSub,setThirdSemSub,setFourthSemSub,setFiveSemSub,setSixSemSub,setSevenSemSub,setEightSemSub,
+         setHtmlNotes,setCssNotes,setJsNotes,setReactNotes,setEcBranch,setCsBranch,setCeBranch,setMeBranch}=useContext(AuthContext)
 
   let [firstYear,setFirstYear]=useState(false)
   let [secondYear,setSecondyear]=useState(false)
   let [thirdYear,setThirdYear]=useState(false)
   let [fourthYear,setFourthYear]=useState(false)
+
+  let [acadmi,setAcadmi]=useState(false)
+  let [previ,setPrevi]=useState(false)
 
     function AcademicPreview(){
       setPrevious(false)
@@ -28,6 +32,8 @@ function Home(){
       setYear(false)
       setSemester(false)
       setVisible(!visible)
+      setAcadmi(true)
+      setPrevi(false)
     }
     function PreviousPreview(){
       setProgramming(false)
@@ -36,6 +42,8 @@ function Home(){
       setVisible(false)
       setSemester(false)
       setPrevious(!previous)
+      setAcadmi(false)
+      setPrevi(true)
     }
     function ProgrammingPreview(){
       setBranch(false)
@@ -222,8 +230,30 @@ function BranchToYearMe(){
     setEightSemSub(true)
   }
 
-
-
+function handleHtml(){
+  setHtmlNotes(true)
+  setCssNotes(false)
+  setJsNotes(false)
+  setReactNotes(false)
+}
+function handleCss(){
+  setHtmlNotes(false)
+  setCssNotes(true)
+  setJsNotes(false)
+  setReactNotes(false)
+}
+function handleJs(){
+  setHtmlNotes(false)
+  setCssNotes(false)
+  setJsNotes(true)
+  setReactNotes(false)
+}
+function handleReact(){
+  setHtmlNotes(false)
+  setCssNotes(false)
+  setJsNotes(false)
+  setReactNotes(true)
+}
 
 
   
@@ -245,7 +275,7 @@ function BranchToYearMe(){
           
          <div className="main-show-hide" style={{ display: visible ? 'block' : 'none' }}>
           <p>---SELECT COURSE---</p>
-         <button>Bachelor of Technology(B.Tech)</button>
+         <button onClick={TitleToBranch}>Bachelor of Technology(B.Tech)</button>
          </div>
          <div className="main-show-hide" style={{ display: previous ? 'block' : 'none' }}>
          <p>---SELECT COURSE---</p>
@@ -253,12 +283,10 @@ function BranchToYearMe(){
          </div>
          <div className="main-show-hide" style={{ display: programming ? 'block' : 'none' }}>
           <p>---SELECT LANGUAGE--</p>
-        <button>HTML5</button>
-        <button>CSS3</button>
-        <button>JavaScript</button>
-        <button>React</button>
-        <button>Java</button>
-        <button>Python</button>
+        <Link to='/HTML-full-notes-with-brain-boost-study-hub'><button onClick={handleHtml}>HTML5</button></Link>
+        <Link to='/CSS-full-notes-with-brain-boost-study-hub'><button onClick={handleCss}>CSS3</button></Link>
+        <Link to='/JavaScript-full-notes-with-brain-boost-study-hub'><button onClick={handleJs}>JavaScript</button></Link>
+        <Link to='/React-full-notes-with-brain-boost-study-hub'><button onClick={handleReact}>React</button></Link>
          </div>
          <div className="main-show-hide" style={{ display: branch ? 'block' : 'none' }}>
           <p>---SELECT BRANCE--</p>
@@ -276,16 +304,27 @@ function BranchToYearMe(){
         <button onClick={YearToSemester4}>Fourth</button>
          </div>
 
-         <div className="main-show-hide" style={{ display: semester ? 'block' : 'none' }}>
+         <div className="main-show-hide" style={{ display: semester && previ && !acadmi? 'block' : 'none' }}>
           <p>---SELECT SEMESTER--</p>
-        <Link to='/1st-semester-subjects'><button style={{display:firstYear?"block":"none"}} onClick={handleFirst}>First</button></Link>
-        <Link to='/2nd-semester-subjects'><button style={{display:firstYear?"block":"none"}} onClick={handleSecond}>Second</button></Link>
-        <Link to='/3rd-semester-subjects'><button style={{display:secondYear?"block":"none"}} onClick={handleThird}>Third</button></Link>
-        <Link to='/4th-semester-subjects'><button style={{display:secondYear?"block":"none"}} onClick={handleFourth}>Fourth</button></Link>
-        <Link to='/5th-semester-subjects'><button style={{display:thirdYear?"block":"none"}} onClick={handleFive}>Fifth</button></Link>
-        <Link to='/6th-semester-subjects'><button style={{display:thirdYear?"block":"none"}} onClick={handleSix}>Six</button></Link>
-        <Link to='/7th-semester-subjects'><button style={{display:fourthYear?"block":"none"}} onClick={handleSeven}>Seven</button></Link>
-        <Link to='/8th-semester-subjects'><button style={{display:fourthYear?"block":"none"}} onClick={handleEight}>Eight</button></Link>
+        <Link to='/1st-semester-previous-year-paper'><button style={{display:firstYear?"block":"none"}} onClick={handleFirst}>First</button></Link>
+        <Link to='/2nd-semester-previous-year-paper'><button style={{display:firstYear?"block":"none"}} onClick={handleSecond}>Second</button></Link>
+        <Link to='/3rd-semester-previous-year-paper'><button style={{display:secondYear?"block":"none"}} onClick={handleThird}>Third</button></Link>
+        <Link to='/4th-semester-previous-year-paper'><button style={{display:secondYear?"block":"none"}} onClick={handleFourth}>Fourth</button></Link>
+        <Link to='/5th-semester-previous-year-paper'><button style={{display:thirdYear?"block":"none"}} onClick={handleFive}>Fifth</button></Link>
+        <Link to='/6th-semester-previous-year-paper'><button style={{display:thirdYear?"block":"none"}} onClick={handleSix}>Six</button></Link>
+        <Link to='/7th-semester-previous-year-paper'><button style={{display:fourthYear?"block":"none"}} onClick={handleSeven}>Seven</button></Link>
+        <Link to='/8th-semester-previous-year-paper'><button style={{display:fourthYear?"block":"none"}} onClick={handleEight}>Eight</button></Link>
+         </div>
+         <div className="main-show-hide" style={{ display: semester && acadmi && !previ? 'block' : 'none' }}>
+          <p>---SELECT SEMESTER--</p>
+        <Link to='/1st-semester-notes'><button style={{display:firstYear?"block":"none"}} onClick={handleFirst}>First</button></Link>
+        <Link to='/2nd-semester-notes'><button style={{display:firstYear?"block":"none"}} onClick={handleSecond}>Second</button></Link>
+        <Link to='/3rd-semester-notes'><button style={{display:secondYear?"block":"none"}} onClick={handleThird}>Third</button></Link>
+        <Link to='/4th-semester-notes'><button style={{display:secondYear?"block":"none"}} onClick={handleFourth}>Fourth</button></Link>
+        <Link to='/5th-semester-notes'><button style={{display:thirdYear?"block":"none"}} onClick={handleFive}>Fifth</button></Link>
+        <Link to='/6th-semester-notes'><button style={{display:thirdYear?"block":"none"}} onClick={handleSix}>Six</button></Link>
+        <Link to='/7th-semester-notes'><button style={{display:fourthYear?"block":"none"}} onClick={handleSeven}>Seven</button></Link>
+        <Link to='/8th-semester-notes'><button style={{display:fourthYear?"block":"none"}} onClick={handleEight}>Eight</button></Link>
          </div>
         
 </div>
