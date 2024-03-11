@@ -3,12 +3,20 @@ import { AuthContext } from "../Context/AuthContextProvider"
 import { useContext } from "react"
 import { Link } from "react-router-dom"
 function Subject(){
-   let {firstSemSub,secondSemSub,thirdSemSub,fourthSemSub,fifthSemSub,sixSemSub,sevenSemSub,eightSemSub,csBranch,ecBranch,ceBranch,meBranch,setChemistry,setMath,setEnglish,setBeee,setEgraphic}=useContext(AuthContext);
+   let {firstSemSub,secondSemSub,thirdSemSub,fourthSemSub,fifthSemSub,sixSemSub,sevenSemSub,eightSemSub,csBranch,ecBranch,ceBranch,meBranch,setChemistry,setMath,setEnglish,setBeee,setEgraphic,
+        setMath3,setAda,setSoftware,setCoa,setOs,setMl,setCn,setCd,setPm,setPhysics,setmath2,setMechanical,setCivil,setBasic}=useContext(AuthContext);
 
    function handleChemistry(){
     setChemistry(true)
     setMath(false)
     setEnglish(false)
+    setBeee(false)
+    setEgraphic(false)
+    setPhysics(false)
+    setmath2(false)
+    setMechanical(false)
+    setCivil(false)
+    setBasic(false)
    }
    function handleMath(){
     setChemistry(false)
@@ -16,6 +24,11 @@ function Subject(){
     setEnglish(false)
     setBeee(false)
     setEgraphic(false)
+    setPhysics(false)
+    setmath2(false)
+    setMechanical(false)
+    setCivil(false)
+    setBasic(false)
    }
    function handleEnglish(){
     setChemistry(false)
@@ -23,6 +36,11 @@ function Subject(){
     setEnglish(true)
     setBeee(false)
     setEgraphic(false)
+    setPhysics(false)
+    setmath2(false)
+    setMechanical(false)
+    setCivil(false)
+    setBasic(false)
    }
    function handleBeee(){
     setChemistry(false)
@@ -30,6 +48,11 @@ function Subject(){
     setEnglish(false)
     setBeee(true)
     setEgraphic(false)
+    setPhysics(false)
+    setmath2(false)
+    setMechanical(false)
+    setCivil(false)
+    setBasic(false)
    }
   function handleGraphics(){
     setChemistry(false)
@@ -37,6 +60,170 @@ function Subject(){
     setEnglish(false)
     setBeee(false)
     setEgraphic(true)
+    setPhysics(false)
+    setmath2(false)
+    setMechanical(false)
+    setCivil(false)
+    setBasic(false)
+  }
+  function handlePhysics(){
+    setChemistry(false)
+    setMath(false)
+    setEnglish(false)
+    setBeee(false)
+    setEgraphic(false)
+    setPhysics(true)
+    setmath2(false)
+    setMechanical(false)
+    setCivil(false)
+    setBasic(false)
+  }
+  function handleMath2(){
+    setChemistry(false)
+    setMath(false)
+    setEnglish(false)
+    setBeee(false)
+    setEgraphic(false)
+    setPhysics(false)
+    setmath2(true)
+    setMechanical(false)
+    setCivil(false)
+    setBasic(false)
+  }
+  function handleMechanical(){
+    setChemistry(false)
+    setMath(false)
+    setEnglish(false)
+    setBeee(false)
+    setEgraphic(false)
+    setPhysics(false)
+    setmath2(false)
+    setMechanical(true)
+    setCivil(false)
+    setBasic(false)
+  }
+  function handleCivil(){
+    setChemistry(false)
+    setMath(false)
+    setEnglish(false)
+    setBeee(false)
+    setEgraphic(false)
+    setPhysics(false)
+    setmath2(false)
+    setMechanical(false)
+    setCivil(true)
+    setBasic(false)
+  }
+  function handleComputer(){
+    setChemistry(false)
+    setMath(false)
+    setEnglish(false)
+    setBeee(false)
+    setEgraphic(false)
+    setPhysics(false)
+    setmath2(false)
+    setMechanical(false)
+    setCivil(false)
+    setBasic(true)
+  }
+  function handleMath3(){
+      setMath3(true)
+      setAda(false)
+      setSoftware(false)
+      setCoa(false)
+      setOs(false)
+      setMl(false)
+      setCn(false)
+      setCd(false)
+      setPm(false)
+  }
+  function handleAda(){
+      setMath3(false)
+      setAda(true)
+      setSoftware(false)
+      setCoa(false)
+      setOs(false)
+      setMl(false)
+      setCn(false)
+      setCd(false)
+      setPm(false)
+  }
+  function handleSoftware(){
+      setMath3(false)
+      setAda(false)
+      setSoftware(true)
+      setCoa(false)
+      setOs(false)
+      setMl(false)
+      setCn(false)
+      setCd(false)
+      setPm(false)
+  }
+  function handleCoa(){
+      setMath3(false)
+      setAda(false)
+      setSoftware(false)
+      setCoa(true)
+      setOs(false)
+      setMl(false)
+      setCn(false)
+      setCd(false)
+      setPm(false)
+  }
+  function handleOs(){
+      setMath3(false)
+      setAda(false)
+      setSoftware(false)
+      setCoa(false)
+      setOs(true)
+      setMl(false)
+      setCn(false)
+      setCd(false)
+      setPm(false)
+  }
+  function handleMl(){
+    setMath3(false)
+    setAda(false)
+    setSoftware(false)
+    setCoa(false)
+    setOs(false)
+    setMl(true)
+    setCn(false)
+    setCd(false)
+    setPm(false)
+  }
+  function handleCn(){
+    setMath3(false)
+    setAda(false)
+    setSoftware(false)
+    setCoa(false)
+    setOs(false)
+    setMl(false)
+    setCn(true)
+    setCd(false)
+    setPm(false)
+  }
+  function handleCd(){
+    setMath3(false)
+    setAda(false)
+    setSoftware(false)
+    setCoa(false)
+    setOs(false)
+    setMl(false)
+    setCn(false)
+    setCd(true)
+    setPm(false)
+  }
+  function handlePm(){
+    setMath3(false)
+    setAda(false)
+    setSoftware(false)
+    setCoa(false)
+    setOs(false)
+    setMl(false)
+    setCn(false)
+    setCd(false)
+    setPm(true)
   }
     return <>
       <div>
@@ -55,12 +242,11 @@ function Subject(){
         <h1 className="subject-header">-----SELECT SUBJECTS----</h1>
         <h2 className="subject-header" style={{color:"red"}}>!! 2ND SEMESTER LATEST !!</h2>
         <div className="subject-list">
-            <button>BT-201 - Engineering Physics</button>
-            <button>BT-202 - Mathematics-II</button>
-            <button>BT-203 - Basic Mechanical Engineering</button>
-            <button>BT-204 - Basic Civil Engineering & Mechanics</button>
-            <button>BT-205 - Basic Computer Engineering</button>
-            <button>BT-206 - Language Lab & Seminars</button>
+           <Link to='/previous-year-physics-papers'> <button onClick={handlePhysics}>BT-201 - Engineering Physics</button></Link>
+           <Link to='/previous-year-mathematics-2-papers'> <button onClick={handleMath2}>BT-202 - Mathematics-II</button></Link>
+           <Link to='/previous-year-basic-mechanical-engineering-papers'> <button onClick={handleMechanical}>BT-203 - Basic Mechanical Engineering</button></Link>
+           <Link to='/previous-year-basic-civil-engineering-papers'> <button onClick={handleCivil}>BT-204 - Basic Civil Engineering & Mechanics</button></Link>
+           <Link to='/previous-year-basic-computer-engineering-papers'> <button onClick={handleComputer}>BT-205 - Basic Computer Engineering</button></Link>
         </div>
        </div>
 
@@ -80,12 +266,11 @@ function Subject(){
         <h1 className="subject-header">-----SELECT SUBJECTS----</h1>
         <h2 className="subject-header" style={{color:"red"}}>!! 4TH SEMESTER LATEST !!</h2>
         <div className="subject-list">
-            <button>BT-401 - Mathematics- III</button>
-            <button>CS-402 - Analysis Design of Algorithm</button>
-            <button>CS-403 - Software Engineering</button>
-            <button>CS-404 - Computer Org. & Architecture</button>
-            <button>CS-405 - Operating Systems</button>
-            <button>CS-406 - Programming Practices</button>
+           <Link to='/previous-year-mathematics-3-papers'> <button onClick={handleMath3}>BT-401 - Mathematics- III</button></Link>
+           <Link to='/previous-year-analysis-and-design-of-algorithm-papers'> <button onClick={handleAda}>CS-402 - Analysis Design of Algorithm</button></Link>
+           <Link to='/previous-year-software-engineering-papers'> <button onClick={handleSoftware}>CS-403 - Software Engineering</button></Link>
+           <Link to='/previous-year-computer-organization-and-architecture-papers'> <button onClick={handleCoa}>CS-404 - Computer Org. & Architecture</button></Link>
+           <Link to='/previous-year-operating-system-papers'> <button onClick={handleOs}>CS-405 - Operating Systems</button></Link>
         </div>
        </div>
 
@@ -98,7 +283,7 @@ function Subject(){
             <button>CS-503 - Data Analytics</button>
             <button>CS-503 - Pattern Recognition</button>
             <button>CS-503 - Cyber Security</button>
-            <button>CS-504 - Internet and Web Technologys</button>
+            <button>CS-504 - Internet and Web Technology</button>
             <button>CS-504 - Object Oriented Programming</button>
             <button>CS-504 - Introduction to Database Management Systems</button>
             <button>CS-505 - Lab (Linux)</button>
@@ -110,14 +295,10 @@ function Subject(){
         <h1 className="subject-header">-----SELECT SUBJECTS----</h1>
         <h2 className="subject-header" style={{color:"red"}}>!! 6TH SEMESTER LATEST !!</h2>
         <div className="subject-list">
-            <button>CS-601 - Machine Learning</button>
-            <button>CS-602 - Computer Networks</button>
-            <button>CS-603 - Advanced Computer Architecture</button>
-            <button>CS-603 - Computer Graphics & Visualisation</button>
-            <button>CS-603 - Compiler Design</button>
-            <button>CS-604 - Knowledge Management</button>
-            <button>CS-604 - Project Management</button>
-            <button>CS-604 - Rural Technology & Community Development</button>
+           <Link to='/previous-year-machine-learning-papers'> <button onClick={handleMl}>CS-601 - Machine Learning</button></Link>
+           <Link to='/previous-year-computer-network-papers'> <button onClick={handleCn}>CS-602 - Computer Networks</button></Link>           
+           <Link to='/previous-year-compiler-design-papers'> <button onClick={handleCd}>CS-603 - Compiler Design</button></Link>
+           <Link to='/previous-year-project-management-papers'> <button onClick={handlePm}>CS-604 - Project Management</button></Link>
         </div>
        </div>
 

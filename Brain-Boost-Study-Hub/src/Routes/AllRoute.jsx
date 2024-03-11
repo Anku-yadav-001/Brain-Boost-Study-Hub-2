@@ -11,6 +11,7 @@ import CssNotes from "../Pages/CssNotes"
 import Javascript from "../Pages/Javascript"
 import ReactNotes from "../Pages/React"
 import Papers from "../Pages/Papers"
+import CsPapers from "../Pages/CsPapers"
 
 function AllRoutes(){
    
@@ -51,6 +52,23 @@ function AllRoutes(){
              <Route path="/previous-year-english-for-communication-papers" element={<Papers/>}/>
              <Route path="/previous-year-basic-electrical-and-electronic-engineering-papers" element={<Papers/>}/>
              <Route path='/previous-year-engineering-graphics-papers' element={<Papers/>}/>
+
+            <Route path="/previous-year-physics-papers" element={<Papers/>}/>            
+            <Route path="/previous-year-mathematics-2-papers" element={<Papers/>}/>
+            <Route path="/previous-year-basic-mechanical-engineering-papers" element={<Papers/>}/>
+            <Route path="/previous-year-basic-civil-engineering-papers" element={<Papers/>}/>
+            <Route path="/previous-year-basic-computer-engineering-papers" element={<Papers/>}/>
+            
+             <Route path="/previous-year-mathematics-3-papers" element={<CsPapers/>}/>
+             <Route path='/previous-year-analysis-and-design-of-algorithm-papers' element={<CsPapers/>}/>
+             <Route path="/previous-year-software-engineering-papers" element={<CsPapers/>}/>
+             <Route path='/previous-year-computer-organization-and-architecture-papers' element={<CsPapers/>}/>
+             <Route path='/previous-year-operating-system-papers' element={<CsPapers/>}/>
+
+             <Route path="/previous-year-machine-learning-papers" element={<CsPapers/>}/>
+             <Route path="/previous-year-computer-network-papers" element={<CsPapers/>}/>
+             <Route path="/previous-year-compiler-design-papers" element={<CsPapers/>}/>
+             <Route path="/previous-year-project-management-papers" element={<CsPapers/>}/>
 
         </Routes>
     </div>

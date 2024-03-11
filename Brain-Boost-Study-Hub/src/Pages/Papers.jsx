@@ -4,9 +4,9 @@ import { useContext } from "react"
 import { AuthContext } from "../Context/AuthContextProvider"
 
 function Papers(){
-    let {chemistry,math,english,beee,eGraphic}=useContext(AuthContext)
+    let {chemistry,math,english,beee,eGraphic,physics,math2,mechanical,civil,basic}=useContext(AuthContext)
     return <>
-     <div className="select-subject-container" style={{display:chemistry && !math && !english && !beee && !eGraphic? 'block':'none'}}>
+     <div className="select-subject-container" style={{display:chemistry && !math && !english && !beee && !eGraphic && !physics && !math2 && !mechanical && !civil && !basic? 'block':'none'}}>
         <h1 className="subject-header">!! CHEMISTRY PAPERS !!</h1>
         <div className="subject-list">
            <Link to='https://drive.google.com/file/d/1Z6v8LOCeg2aBCAAfICTZMkTiwy3o3iz9/view?usp=drive_link' target="_blank"> <button>bt-101-engineering-chemistry-jun-2023</button></Link>
@@ -32,7 +32,7 @@ function Papers(){
            <Link to='https://drive.google.com/file/d/1SCeRDSFfNBC9Ux1CTjTcMxx4nZUwDYqe/view?usp=drive_link' target="_blank"> <button>cy-110-chemistry-jun-2016</button></Link>
         </div>
        </div>
-       <div className="select-subject-container" style={{display:!chemistry && math && !english && !beee && !eGraphic? 'block':'none'}}>
+       <div className="select-subject-container" style={{display:!chemistry && math && !english && !beee && !eGraphic && !physics && !math2 && !mechanical && !civil && !basic? 'block':'none'}}>
         <h1 className="subject-header">!! MATHEMATICS-1 PAPERS !!</h1>
         <div className="subject-list">
                 <Link to='https://drive.google.com/file/d/199lDhHUvZQ5tUA0Iiq4qzEQieHgMQXf6/view?usp=drive_link' target="_blank"> <button>bt-102-mathematics-1-jun-2023</button></Link>
@@ -58,7 +58,7 @@ function Papers(){
                 <Link to='https://drive.google.com/file/d/1Up4IYiL1Lo5MdC7ZEp1xYzbFaUEpQ3Cy/view?usp=drive_link' target="_blank"> <button>ma-110-mathematics-1-dec-2015</button></Link>
          </div>
        </div>
-       <div className="select-subject-container" style={{display:!chemistry && !math && english && !beee && !eGraphic? 'block':'none'}}>
+       <div className="select-subject-container" style={{display:!chemistry && !math && english && !beee && !eGraphic && !physics && !math2 && !mechanical && !civil && !basic? 'block':'none'}}>
         <h1 className="subject-header">!! ENGLISH-FOR-COMMUNICATION PAPERS !!</h1>
         <div className="subject-list">
                      <Link to='https://drive.google.com/file/d/1sda7owfe7LUD-Z-CoEiKiHEvh9gsEAr6/view?usp=drive_link' target="_blank"> <button>be-103-communication-skills-dec-2015</button> </Link>
@@ -77,14 +77,45 @@ function Papers(){
                      <Link to='https://drive.google.com/file/d/1W1rEnXP1CqBHAf3zsFz7hvcokumRcN8y/view?usp=drive_link' target="_blank"> <button>hu-110-english-jun-2020</button> </Link>
             </div>
        </div>
-       <div className="select-subject-container" style={{display:!chemistry && !math && !english && beee && !eGraphic? 'block':'none'}}>
+       <div className="select-subject-container" style={{display:!chemistry && !math && !english && beee && !eGraphic && !physics && !math2 && !mechanical && !civil && !basic? 'block':'none'}}>
         <h1 className="subject-header">!! BASIC ELECTRICAL AND ELECTRONICS ENGINEERING  PAPERS !!</h1>
         <div className="subject-list">
                     
            </div>
        </div>
-       <div className="select-subject-container" style={{display:!chemistry && !math && !english && !beee && eGraphic? 'block':'none'}}>
+       <div className="select-subject-container" style={{display:!chemistry && !math && !english && !beee && eGraphic && !physics && !math2 && !mechanical && !civil && !basic? 'block':'none'}}>
         <h1 className="subject-header">!! ENGINEERING GRAPHICS/DRAWING  PAPERS !!</h1>
+        <div className="subject-list">
+                    
+           </div>
+       </div>
+
+       <div className="select-subject-container" style={{display:!chemistry && !math && !english && !beee && !eGraphic && physics && !math2 && !mechanical && !civil && !basic? 'block':'none'}}>
+        <h1 className="subject-header">!! ENGINEERING PHYSICS  PAPERS !!</h1>
+        <div className="subject-list">
+                    
+           </div>
+       </div>
+       <div className="select-subject-container" style={{display:!chemistry && !math && !english && !beee && !eGraphic && !physics && math2 && !mechanical && !civil && !basic? 'block':'none'}}>
+        <h1 className="subject-header">!! ENGINEERING MATHEMATICS-2  PAPERS !!</h1>
+        <div className="subject-list">
+                    
+           </div>
+       </div>
+       <div className="select-subject-container" style={{display:!chemistry && !math && !english && !beee && !eGraphic && !physics && !math2 && mechanical && !civil && !basic? 'block':'none'}}>
+        <h1 className="subject-header">!! BASIC MECHANICAL ENGINEERING  PAPERS !!</h1>
+        <div className="subject-list">
+                    
+           </div>
+       </div>
+       <div className="select-subject-container" style={{display:!chemistry && !math && !english && !beee && !eGraphic && !physics && !math2 && !mechanical && civil && !basic? 'block':'none'}}>
+        <h1 className="subject-header">!! BASIC CIVIL ENGINEERING  PAPERS !!</h1>
+        <div className="subject-list">
+                    
+           </div>
+       </div>
+       <div className="select-subject-container" style={{display:!chemistry && !math && !english && !beee && !eGraphic && !physics && !math2 && !mechanical && !civil &&  basic? 'block':'none'}}>
+        <h1 className="subject-header">!! BASIC COMPUTER ENGINEERING  PAPERS !!</h1>
         <div className="subject-list">
                     
            </div>
