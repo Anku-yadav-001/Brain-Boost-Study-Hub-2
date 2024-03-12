@@ -88,3 +88,25 @@
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
+@media only screen and (max-width: 768px){
+ 
+  .html-notes{
+      width: 80%;
+      height: 82vh;
+      margin-left: 10%;
+      border-radius: 10px;
+  }
+  .html-notes h1{
+    font-size: 25px;
+    font-weight: 800;
+  }
+  .glow-on-hover {
+      width: 80%;
+      height: 50px;
+      border-radius: 10px;
+      font-size: 12px;
+      padding: 10px;
+      font-weight: 700;
+     
+  }
+}

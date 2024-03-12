@@ -1,6 +1,6 @@
 
 .select-subject-container{
-    background-color: black;
+    background-color: blue;
     height: 110vh;
 }
 .subject-header{
@@ -30,4 +30,8 @@
 .subject-list button:hover{
     background-color: blue;
     
+}
+@media only screen and (max-width: 768px){
+    .select-subject-container{
+    }
 }

@@ -9,7 +9,7 @@
     font-size: 40px;
     padding: 20px;
     text-decoration: underline;
-   
+   color: white;
 }
 .whyus-main-container{
    display: flex;
@@ -49,5 +49,37 @@
     }
     100%{
         transform: translateY(5%);
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .whyus-super-main-container{
+        height: 100vh;
+    }
+    .whyus-header{
+       
+        font-size: 30px;
+        padding: 10px;
+       
+      
+    }
+    .whyus-main-container{
+        display: block;
+     }
+     .whyus-main-container div{
+        width: 85%;
+        margin: 20px;
+    }
+    .whyus-main-container div img{
+        width: 20%;
+        padding: 10px;
+    }
+    .whyus-main-container div h3{
+        padding: 8px;
+        font-size: 17px;
+    }
+    .whyus-main-container div p{
+        padding: 8px;
+        font-size: 15px;
     }
 }

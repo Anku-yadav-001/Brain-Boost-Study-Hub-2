@@ -18,7 +18,7 @@ function About(){
                    or simply seeking to enhance your knowledge, you'll find valuable resources
                     here to support your academic endeavors.</p>
         </div>
-        <div>
+        <div className="stack">
                 <img src={StudyStack} alt="" className="study-stack"/>
         </div>
     </div>

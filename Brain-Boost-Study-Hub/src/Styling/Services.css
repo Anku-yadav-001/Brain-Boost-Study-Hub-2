@@ -59,3 +59,33 @@
         transform: translateY(10%);
     }
 }
+@media only screen and (max-width: 768px){
+    .services-main-container{
+        height: 110vh;
+    }
+    .service-heading{
+        font-size: 20px;
+     }
+     .service-container{
+        display: block; 
+    }
+    .service-container div{
+        border-radius: 10px;
+        width: 78%;
+       margin-top: 30px;
+       margin-left: 11%;
+    }
+    .service-container div img{
+        width: 50%;
+    }
+    .service-container h3{
+        font-size: 18px;
+    }
+    .service-container p{
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .aligning{
+        display: flex;
+    }
+}

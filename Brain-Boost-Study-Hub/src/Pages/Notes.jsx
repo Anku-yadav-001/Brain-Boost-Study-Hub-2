@@ -74,7 +74,7 @@ function Notes(){
            <Link to='/chemistry-notes'> <button onClick={handleChemistryNotes}>BT-101 - Engineering Chemistry</button></Link>
            <Link to='/mathematics-notes'> <button onClick={handleMathNotes}>BT-102 - Mathematics-I</button></Link>
            <Link to='/engilish-for-communication-notes'> <button onClick={handleEnglishNotes}>BT-103 - English for Communication</button></Link>
-           <Link to='/basic-electrical-and-electronic-engineering-notes' onClick={handleBeeeNotes}> <button>BT-104 - Basic Electrical & Electronics Engineering</button></Link>
+           <Link to='/basic-electrical-and-electronic-engineering-notes'> <button onClick={handleBeeeNotes}>BT-104 - Basic Electrical & Electronics Engineering</button></Link>
            <Link to='/engineering-graphics-notes'> <button onClick={handleGraphicNotes}>BT-105 - Engineering Graphics</button></Link>
           
         </div>
@@ -181,12 +181,12 @@ function Notes(){
         <h1 className="subject-header">-----SELECT SUBJECTS----</h1>
         <h2 className="subject-header" style={{color:"blue"}}>!! 1ST SEMESTER LATEST !!</h2>
         <div className="subject-list1">
-          <button>BT-101 - Engineering Chemistry</button>
-            <button>BT-102 - Mathematics-I</button>
-            <button>BT-103 - English for Communication</button>
-            <button>BT-104 - Basic Electrical & Electronics Engineering</button>
-            <button>BT-105 - Engineering Graphics</button>
-            <button>BT-106 - Manufacturing Practices</button>
+           <Link to='/chemistry-notes'> <button onClick={handleChemistryNotes}>BT-101 - Engineering Chemistry</button></Link>
+           <Link to='/mathematics-notes'> <button onClick={handleMathNotes}>BT-102 - Mathematics-I</button></Link>
+           <Link to='/engilish-for-communication-notes'> <button onClick={handleEnglishNotes}>BT-103 - English for Communication</button></Link>
+           <Link to='/basic-electrical-and-electronic-engineering-notes'> <button  onClick={handleBeeeNotes}>BT-104 - Basic Electrical & Electronics Engineering</button></Link>
+           <Link to='/engineering-graphics-notes'> <button onClick={handleGraphicNotes}>BT-105 - Engineering Graphics</button></Link>
+          
         </div>
        </div>
       </div>
@@ -294,12 +294,12 @@ function Notes(){
         <h1 className="subject-header">-----SELECT SUBJECTS----</h1>
         <h2 className="subject-header" style={{color:"blue"}}>!! 1ST SEMESTER LATEST !!</h2>
         <div className="subject-list1">
-          <button>BT-101 - Engineering Chemistry</button>
-            <button>BT-102 - Mathematics-I</button>
-            <button>BT-103 - English for Communication</button>
-            <button>BT-104 - Basic Electrical & Electronics Engineering</button>
-            <button>BT-105 - Engineering Graphics</button>
-            <button>BT-106 - Manufacturing Practices</button>
+        <Link to='/chemistry-notes'> <button onClick={handleChemistryNotes}>BT-101 - Engineering Chemistry</button></Link>
+           <Link to='/mathematics-notes'> <button onClick={handleMathNotes}>BT-102 - Mathematics-I</button></Link>
+           <Link to='/engilish-for-communication-notes'> <button onClick={handleEnglishNotes}>BT-103 - English for Communication</button></Link>
+           <Link to='/basic-electrical-and-electronic-engineering-notes'> <button  onClick={handleBeeeNotes}>BT-104 - Basic Electrical & Electronics Engineering</button></Link>
+           <Link to='/engineering-graphics-notes'> <button onClick={handleGraphicNotes}>BT-105 - Engineering Graphics</button></Link>
+          
         </div>
        </div>
       
@@ -412,18 +412,17 @@ function Notes(){
 
 
        <div className="select-subject-container"  style={{ display: firstSemSub && !csBranch && !ecBranch  && !ceBranch && meBranch? 'block' : 'none' }}>
-        <h1 className="subject-header">-----SELECT SUBJECTblue--</h1>
+        <h1 className="subject-header">-----SELECT SUBJECT-----</h1>
         <h2 className="subject-header" style={{color:"blue"}}>!! 1ST SEMESTER LATEST !!</h2>
         <div className="subject-list1">
-          <button>BT-101 - Engineering Chemistry</button>
-            <button>BT-102 - Mathematics-I</button>
-            <button>BT-103 - English for Communication</button>
-            <button>BT-104 - Basic Electrical & Electronics Engineering</button>
-            <button>BT-105 - Engineering Graphics</button>
-            <button>BT-106 - Manufacturing Practices</button>
-        </div>
+           <Link to='/chemistry-notes'> <button onClick={handleChemistryNotes}>BT-101 - Engineering Chemistry</button></Link>
+           <Link to='/mathematics-notes'> <button onClick={handleMathNotes}>BT-102 - Mathematics-I</button></Link>
+           <Link to='/engilish-for-communication-notes'> <button onClick={handleEnglishNotes}>BT-103 - English for Communication</button></Link>
+           <Link to='/basic-electrical-and-electronic-engineering-notes'> <button  onClick={handleBeeeNotes}>BT-104 - Basic Electrical & Electronics Engineering</button></Link>
+           <Link to='/engineering-graphics-notes'> <button onClick={handleGraphicNotes}>BT-105 - Engineering Graphics</button></Link>
+          
        </div>
-      
+      </div>
        <div className="select-subject-container"  style={{ display: secondSemSub && !csBranch && !ecBranch && !ceBranch && meBranch? 'block' : 'none' }}>
         <h1 className="subject-header">-----SELECT SUBJECTS----</h1>
         <h2 className="subject-header" style={{color:"blue"}}>!! 2ND SEMESTER LATEST !!</h2>

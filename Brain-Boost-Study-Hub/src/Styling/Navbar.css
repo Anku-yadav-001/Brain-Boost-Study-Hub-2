@@ -11,6 +11,14 @@
 .navitems-container{
     display: flex;
     justify-content: space-evenly;
+   
+}
+.menu-icon{
+    display: block;
+}
+.menu-icon-1{
+    display: none;
+     padding: 15px;
 }
 .image1{
     width: 120%;
@@ -27,6 +35,28 @@
     position: relative;
     color: whitesmoke;
 }
+.after-show{
+    background-color:blue;
+    position: absolute;
+    z-index: 1;
+    width: 40%;
+    right: 0;
+    height: auto;
+    margin-top: 15%;
+    text-align: center;
+    border-radius: 10px;
+}
+.after-show div{
+    padding: 10px;
+}
+.showing-items{
+
+      text-decoration: none;
+      font-family: sans-serif;
+     color: white;
+     font-weight: 600;
+     
+}
 .navItems::after {
     content: '';
     position: absolute;
@@ -41,4 +71,18 @@
   }
   .navItems:hover::after {
     transform: scaleX(1);
+  }
+
+  @media only screen and (max-width: 768px){
+    .menu-icon{
+        display: none;
+    }
+    .menu-icon-1{
+        display: block;
+    }
+    .image1{
+        width: 80%;
+        padding: 15px;
+        margin-left: -30px;
+    }
   }

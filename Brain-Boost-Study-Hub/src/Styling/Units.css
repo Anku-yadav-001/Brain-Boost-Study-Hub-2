@@ -103,3 +103,28 @@
     background-color: pink;
     
 }
+@media only screen and (max-width: 768px){
+    .units-header{
+       font-weight: 600;
+       font-size: 18px;
+    }
+    .units-name{
+        color: blue;
+     font-weight: 600;
+       font-size: 15px;
+    }
+    .units-list{
+        border: 2px solid black;
+        height: auto;
+       
+        display: block;
+        width: 50%;
+        margin-left: 24%;
+    }
+    .glow{
+        margin: 2%;;
+        width: 100%;
+        font-size: 14px;
+       border: 2px solid;
+    }
+}

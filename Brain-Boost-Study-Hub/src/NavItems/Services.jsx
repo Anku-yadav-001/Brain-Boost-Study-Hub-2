@@ -6,7 +6,8 @@ function Services(){
     return <>
     <div className="services-main-container">
         <h1 className="service-heading">OUR SERVICES...</h1>
-        <div className="service-container">
+      <div className="aligning">
+      <div className="service-container">
         <div>
         <img src={Academic} alt=""  />
             <h3>ACADEMIC NOTES !!</h3>
@@ -24,6 +25,7 @@ function Services(){
             <p>On our website, All the RGPV previous year papers available.</p>
         </div>
         </div>
+      </div>
     </div>
     </>
 }
