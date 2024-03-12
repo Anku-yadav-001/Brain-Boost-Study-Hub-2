@@ -43,6 +43,17 @@ function AuthContextProvider({children}){
    let [cn,setCn]=useState(false)
    let [cd,setCd]=useState(false)
    let [pm,setPm]=useState(false)
+
+   let [chemistryNotes,setChemistryNotes]=useState(false)
+   let [mathNotes,setMathNotes]=useState(false)
+   let [englishNotes,setEnglishNotes]=useState(false)
+   let [beeeNotes,setBeeeNotes]=useState(false)
+   let [graphicsNotes,setGraphicNotes]=useState(false)
+
+   let [mlNotes,setMlNotes]=useState(false)
+   let [cnNotes,setCnNotes]=useState(false)
+   let [cdNotes,setCdNotes]=useState(false)
+   let [pmNotes,setPmNotes]=useState(false)
    
     return (
         <>
@@ -51,7 +62,9 @@ function AuthContextProvider({children}){
                                      csBranch,setCsBranch,ceBranch,setCeBranch ,meBranch,setMeBranch,htmlNotes,setHtmlNotes,
                                      cssNotes,setCssNotes,jsNotes,setJsNotes,reactNotes,setReactNotes,chemistry,setChemistry,math,setMath,
                                      english,setEnglish,beee,setBeee,eGraphic,setEgraphic,math3,setMath3,ada,setAda,software,setSoftware,coa,setCoa,os,setOs,
-                                     ml,setMl,cn,setCn,cd,setCd,pm,setPm,physics,math2,mechanical,civil,basic,setPhysics,setmath2,setMechanical,setCivil,setBasic}}>
+                                     ml,setMl,cn,setCn,cd,setCd,pm,setPm,physics,math2,mechanical,civil,basic,setPhysics,setmath2,setMechanical,setCivil,setBasic,
+                                      chemistryNotes,mathNotes,englishNotes,beeeNotes,graphicsNotes,setChemistryNotes,setMathNotes,setEnglishNotes,setBeeeNotes,setGraphicNotes,
+                                      mlNotes,cnNotes,cdNotes,pmNotes,setMlNotes,setCnNotes,setCdNotes,setPmNotes}}>
             {children}
         </AuthContext.Provider>
         </>

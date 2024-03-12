@@ -12,6 +12,8 @@ import Javascript from "../Pages/Javascript"
 import ReactNotes from "../Pages/React"
 import Papers from "../Pages/Papers"
 import CsPapers from "../Pages/CsPapers"
+import Units from "../Pages/Units"
+import Units1 from "../Pages/Units1"
 
 function AllRoutes(){
    
@@ -69,6 +71,17 @@ function AllRoutes(){
              <Route path="/previous-year-computer-network-papers" element={<CsPapers/>}/>
              <Route path="/previous-year-compiler-design-papers" element={<CsPapers/>}/>
              <Route path="/previous-year-project-management-papers" element={<CsPapers/>}/>
+
+             <Route path="/chemistry-notes" element={<Units/>}/>
+             <Route path="/mathematics-notes" element={<Units/>}/>
+             <Route path="/engilish-for-communication-notes" element={<Units/>}/>
+             <Route path="/basic-electrical-and-electronic-engineering-notes" element={<Units/>}/>
+             <Route path="/engineering-graphics-notes" element={<Units/>}/>
+
+             <Route path="/machine-learning-notes" element={<Units1/>}/>
+             <Route path="/computer-network-notes" element={<Units1/>}/>
+             <Route path="/compiler-design-notes" element={<Units1/>}/>
+             <Route path="/project-management-notes" element={<Units1/>}/>
 
         </Routes>
     </div>

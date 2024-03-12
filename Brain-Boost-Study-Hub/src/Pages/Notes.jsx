@@ -1,20 +1,82 @@
 import "../Styling/Notes.css"
 import { AuthContext } from "../Context/AuthContextProvider"
 import { useContext } from "react"
+import {Link} from "react-router-dom"
 function Notes(){
-   let {firstSemSub,secondSemSub,thirdSemSub,fourthSemSub,fifthSemSub,sixSemSub,sevenSemSub,eightSemSub,csBranch,ecBranch,ceBranch,meBranch}=useContext(AuthContext)
+   let {firstSemSub,secondSemSub,thirdSemSub,fourthSemSub,fifthSemSub,sixSemSub,sevenSemSub,eightSemSub,csBranch,ecBranch,ceBranch,meBranch,
+         setChemistryNotes,setMathNotes,setEnglishNotes,setBeeeNotes,setGraphicNotes,setMlNotes,setCnNotes,setCdNotes,setPmNotes}=useContext(AuthContext)
+
+        function handleChemistryNotes(){
+            setChemistryNotes(true)
+            setMathNotes(false)
+            setEnglishNotes(false)
+            setBeeeNotes(false)
+            setGraphicNotes(false)          
+        }
+        function handleMathNotes(){
+            setChemistryNotes(false)
+            setMathNotes(true)
+            setEnglishNotes(false)
+            setBeeeNotes(false)
+            setGraphicNotes(false)
+        }
+        function handleEnglishNotes(){
+            setChemistryNotes(false)
+            setMathNotes(false)
+            setEnglishNotes(true)
+            setBeeeNotes(false)
+            setGraphicNotes(false)
+        }
+        function handleBeeeNotes(){
+            setChemistryNotes(false)
+            setMathNotes(false)
+            setEnglishNotes(false)
+            setBeeeNotes(true)
+            setGraphicNotes(false)
+        }
+        function handleGraphicNotes(){
+            setChemistryNotes(false)
+            setMathNotes(false)
+            setEnglishNotes(false)
+            setBeeeNotes(false)
+            setGraphicNotes(true)
+        }
+        function handleMachineLearning(){
+            setMlNotes(true)
+            setCnNotes(false)
+            setCdNotes(false)
+            setPmNotes(false)
+        }
+        function handleComputerNetwork(){
+            setMlNotes(false)
+            setCnNotes(true)
+            setCdNotes(false)
+            setPmNotes(false)
+        }
+        function handleCompilerDesign(){
+            setMlNotes(false)
+            setCnNotes(false)
+            setCdNotes(true)
+            setPmNotes(false)
+        }
+        function handleProjectManagement(){
+            setMlNotes(false)
+            setCnNotes(false)
+            setCdNotes(false)
+            setPmNotes(true)          
+        }
     return <>
       <div>
       <div className="select-subject-container"  style={{ display: firstSemSub && csBranch && !ecBranch && !ceBranch && !meBranch? 'block' : 'none' }}>
         <h1 className="subject-header">-----SELECT SUBJECTS----</h1>
         <h2 className="subject-header" style={{color:"blue"}}>!! 1ST SEMESTER LATEST !!</h2>
         <div className="subject-list1">
-            <button>BT-101 - Engineering Chemistry</button>
-            <button>BT-102 - Mathematics-I</button>
-            <button>BT-103 - English for Communication</button>
-            <button>BT-104 - Basic Electrical & Electronics Engineering</button>
-            <button>BT-105 - Engineering Graphics</button>
-            <button>BT-106 - Manufacturing Practices</button>
+           <Link to='/chemistry-notes'> <button onClick={handleChemistryNotes}>BT-101 - Engineering Chemistry</button></Link>
+           <Link to='/mathematics-notes'> <button onClick={handleMathNotes}>BT-102 - Mathematics-I</button></Link>
+           <Link to='/engilish-for-communication-notes'> <button onClick={handleEnglishNotes}>BT-103 - English for Communication</button></Link>
+           <Link to='/basic-electrical-and-electronic-engineering-notes' onClick={handleBeeeNotes}> <button>BT-104 - Basic Electrical & Electronics Engineering</button></Link>
+           <Link to='/engineering-graphics-notes'> <button onClick={handleGraphicNotes}>BT-105 - Engineering Graphics</button></Link>
+          
         </div>
        </div>
        <div className="select-subject-container"  style={{ display: secondSemSub && csBranch && !ecBranch && !ceBranch && !meBranch? 'block' : 'none' }}>
@@ -76,14 +138,10 @@ function Notes(){
         <h1 className="subject-header">-----SELECT SUBJECTS----</h1>
         <h2 className="subject-header" style={{color:"blue"}}>!! 6TH SEMESTER LATEST !!</h2>
         <div className="subject-list1">
-            <button>CS-601 - Machine Learning</button>
-            <button>CS-602 - Computer Networks</button>
-            <button>CS-603 - Advanced Computer Architecture</button>
-            <button>CS-603 - Computer Graphics & Visualisation</button>
-            <button>CS-603 - Compiler Design</button>
-            <button>CS-604 - Knowledge Management</button>
-            <button>CS-604 - Project Management</button>
-            <button>CS-604 - Rural Technology & Community Development</button>
+           <Link to='/machine-learning-notes'> <button onClick={handleMachineLearning}>CS-601 - Machine Learning</button></Link>
+           <Link to='/computer-network-notes'> <button onClick={handleComputerNetwork}>CS-602 - Computer Networks</button></Link>
+           <Link to='/compiler-design-notes'> <button onClick={handleCompilerDesign}>CS-603 - Compiler Design</button></Link>
+           <Link to='/project-management-notes'> <button onClick={handleProjectManagement}>CS-604 - Project Management</button></Link>
         </div>
        </div>
 
